@@ -1,0 +1,650 @@
+INFO - 2024-01-27 00:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 00:28:02 --> mysqli_sql_exception: Table 'db_osnservices.in.settings' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT id,setti...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id,setti...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id,setti...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Settings.php(15): CodeIgniter\Database\BaseConnection->query('SELECT id,setti...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\Admin.php(31): App\Models\Settings->get_all_settings()
+#5 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\Admin->admin()
+#6 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-27 00:28:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.settings' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Settings.php(15): CodeIgniter\Database\BaseConnection->query('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 2 APPPATH\Controllers\Admin.php(31): App\Models\Settings->get_all_settings()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->admin()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 00:28:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.settings' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 3 APPPATH\Models\Settings.php(15): CodeIgniter\Database\BaseConnection->query('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 4 APPPATH\Controllers\Admin.php(31): App\Models\Settings->get_all_settings()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->admin()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 00:28:02 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.settings' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT id,setting_type,name,display_name,value,status FROM settings', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 4 APPPATH\Models\Settings.php(15): CodeIgniter\Database\BaseConnection->query('SELECT id,setting_type,name,display_name,value,status FROM settings')
+ 5 APPPATH\Controllers\Admin.php(31): App\Models\Settings->get_all_settings()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 00:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 00:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 01:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 01:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 01:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:33:24 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:33:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:33:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:33:24 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:33:26 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:33:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:33:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:33:26 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:11 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:11 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:12 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:12 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:12 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:12 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:12 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:13 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:13 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:13 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:13 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:13 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:13 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 01:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:19 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:19 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-27 01:34:28 --> mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist in C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\osnservices.in\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp\htdocs\osnservices.in\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp\htdocs\osnservices.in\app\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575...', '69a7cfd847bf8c3...')
+#5 C:\xampp\htdocs\osnservices.in\app\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575...', 'Arvind@1994')
+#6 C:\xampp\htdocs\osnservices.in\app\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+#7 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(941): App\Controllers\User->login()
+#8 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\osnservices.in\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\osnservices.in\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-27 01:34:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 3 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 4 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 5 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 6 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-27 01:34:28 --> [Caused by] mysqli_sql_exception: Table 'db_osnservices.in.tbl_user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 4 APPPATH\Models\Common.php(113): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_user WHERE username="arvindkumar2575@gmail.com" AND password="69a7cfd847bf8c3f768a7265b01cde51"')
+ 5 APPPATH\Controllers\APIController.php(163): App\Models\Common->get_user_login('arvindkumar2575@gmail.com', '69a7cfd847bf8c3f768a7265b01cde51')
+ 6 APPPATH\Controllers\APIController.php(91): App\Controllers\APIController->userValidate('arvindkumar2575@gmail.com', 'Arvind@1994')
+ 7 APPPATH\Controllers\User.php(27): App\Controllers\APIController->userLogin(Object(CodeIgniter\HTTP\IncomingRequest))
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-27 01:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 01:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-27 01:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
