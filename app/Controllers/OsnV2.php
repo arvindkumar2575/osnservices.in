@@ -5,8 +5,6 @@ namespace App\Controllers;
 class OsnV2 extends BaseController
 {
     protected $apiController;
-    protected $settings;
-    protected $common;
     protected $uri_segment;
     public function __construct()
     {

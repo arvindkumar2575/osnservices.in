@@ -11,7 +11,7 @@
                         $active='active';
                     }
                     ?>
-                    <a class="nav-link <?=$active?>" href="<?=base_url("admin/dashboard")?>">
+                    <a class="nav-link <?=$active?>" href="<?=base_url("dashboard")?>">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
