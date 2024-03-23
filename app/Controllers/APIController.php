@@ -77,6 +77,10 @@ class APIController extends BaseController
     }
 
 
+
+
+
+
     public function userLogin($request)
     {
         $form_type = $request->getVar('form_type');
@@ -200,7 +204,7 @@ class APIController extends BaseController
         $email = $request->getVar('email');
         $verification_code = $request->getVar('verification_code');
         if (isset($email) && !empty($email) && isset($verification_code) && !empty($verification_code)) {
-            $user_data = $this->common->get_single_row('users', 'username', $email);
+            $user_data = $this->common->get_single_row('tbl_users', 'username', $email);
             // echo '<pre>';print_r($user_data);die;
             if (isset($user_data) && !empty($user_data)) {
                 if ($user_data['verified'] == '1') {
@@ -227,6 +231,11 @@ class APIController extends BaseController
         $result = array('status' => false, 'message' => 'Invalid request!');
         return $result;
     }
+
+
+
+
+
 
 
 
@@ -565,5 +574,20 @@ class APIController extends BaseController
             $result = array('status' => false, 'message' => 'Please try again!');
             return $result;
         }
+    }
+
+    public function getAllLeads($type)
+    {
+        $result = array();
+        switch ($type) {
+            case 'contactUs':
+                $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+                break;
+            
+            default:
+                return "";
+                break;
+        }
+        return $result;
     }
 }

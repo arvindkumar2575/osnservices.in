@@ -117,7 +117,7 @@ class Admin extends BaseController
         $data = array();
         $data['parent'] = "admin";
         $data['page'] = "pages";
-        $data['pages'] = $this->users->get_all_pages();
+        $data['pages'] = $this->pages->get_all_pages();
         return view(DASHBOARD_VIEW . '/pages/pages', $data);
     }
 

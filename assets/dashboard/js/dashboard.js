@@ -67,7 +67,7 @@ $(document).ready(function () {
                     let e = $('.short-popup-msg').find('.popup-msg-progressbar')
                     app.fillProgress(e)
                     setInterval(() => {
-                        window.location.href = BASE_URL + "/admin/dashboard";
+                        window.location.href = BASE_URL + "dashboard";
                     }, 2000);
                 } else {
                     let message = res.message

@@ -9,14 +9,10 @@ class Dashboard extends BaseController
 {
     protected $apiController;
     protected $session;
-    protected $settings;
-    protected $common;
     public function __construct()
     {
         $this->apiController = new APIController;
         $this->session = session();
-        $this->settings = new Settings();
-        $this->common = new Common();
     }
 
     public function dashboard()
@@ -28,6 +24,8 @@ class Dashboard extends BaseController
 
         $data = array();
         $data['page'] = "dashboard";
+        $data['leads'] = $this->apiController->getAllLeads("contactUs");
+        // echo '<pre>';print_r($data);die;
         return view(DASHBOARD_VIEW . '/dashboard', $data);
     }
 
