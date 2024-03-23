@@ -93,29 +93,42 @@ class APIController extends BaseController
                 $result = array('status' => false, 'message' => 'All fields are required!');
                 return $result;
             } else {
-                $user_exit = $this->userValidate($username, $password);
-                if ($user_exit) {
-                    if (isset($request_data) && !empty($request_data)) {
-                        $req_data = json_decode(base64_decode($request_data));
-                        if (isset($req_data->course_id) && isset($req_data->plan_id)) {
-                            $d = array(
-                                'user_id' => session("usersession")['id'],
-                                'course_id' => $req_data->course_id,
-                                'plan_id' => $req_data->plan_id
-                            );
-                            $c = $this->common->get_multiple_row('tbl_users_course_plan_mapping', $d);
-                            if (!$c) {
-                                $u = $this->common->data_insert('tbl_users_course_plan_mapping', $d);
+                $user_data = $this->common->get_user_login($username, md5($password));
+                if (isset($user_data) && !empty($user_data) && $user_data["username"] == $username) {
+                    if($user_data["verified"]=="1") {
+                        $usersession = array(
+                            'id' => $user_data['id'],
+                            'isLoggedIn' => true
+                        );
+                        $this->session->set("usersession", $usersession);
+                        
+                        // for checking courses in previous version of osn 
+                        if (isset($request_data) && !empty($request_data)) {
+                            $req_data = json_decode(base64_decode($request_data));
+                            if (isset($req_data->course_id) && isset($req_data->plan_id)) {
+                                $d = array(
+                                    'user_id' => session("usersession")['id'],
+                                    'course_id' => $req_data->course_id,
+                                    'plan_id' => $req_data->plan_id
+                                );
+                                $c = $this->common->get_multiple_row('tbl_users_course_plan_mapping', $d);
+                                if (!$c) {
+                                    $u = $this->common->data_insert('tbl_users_course_plan_mapping', $d);
+                                }
+                            } else {
+                                $result = array('status' => false, 'message' => 'Request is incorrect!');
+                                return $result;
                             }
-                        } else {
-                            $result = array('status' => false, 'message' => 'Request is incorrect!');
-                            return $result;
                         }
+                        $result = array('status' => true, 'message' => 'You are successfully logged in!');
+                        return $result;
+                    }else{
+                        $result = array('status' => false, 'message' => 'You are not verified yet!');
+                        return $result;
                     }
-                    $result = array('status' => true, 'message' => 'You are successfully logged in!');
-                    return $result;
-                } else {
-                    $result = array('status' => false, 'message' => 'Please try again!');
+
+                }else{
+                    $result = array('status' => false, 'message' => 'Username & Password doesn\'t exit!');
                     return $result;
                 }
             }
@@ -147,7 +160,7 @@ class APIController extends BaseController
                                 return $result;
                             }
                         }
-                        $result = array('status' => true, 'message' => 'You have successfully register!<br>You will get email notification within 5hr.', 'id' => $user_id);
+                        $result = array('status' => true, 'message' => 'You have successfully register!<br>You will get email notification within 2hr.', 'id' => $user_id);
                         return $result;
                     } else {
                         $result = array('status' => false, 'message' => 'Please try again!');
@@ -161,22 +174,6 @@ class APIController extends BaseController
         }
         $result = array('status' => false, 'message' => 'Invalid request!');
         return $result;
-    }
-
-    private function userValidate($username, $password)
-    {
-        $user_data = $this->common->get_user_login($username, md5($password));
-        // echo '<pre>';var_dump($user_data);die;
-        if (isset($user_data) && !empty($user_data) && $user_data["username"] == $username) {
-            $usersession = array(
-                'id' => $user_data['id'],
-                'isLoggedIn' => true
-            );
-            $this->session->set("usersession", $usersession);
-            return true;
-        } else {
-            return false;
-        }
     }
 
     private function userRegister($first_name, $last_name, $username, $password)
@@ -576,12 +573,28 @@ class APIController extends BaseController
         }
     }
 
-    public function getAllLeads($type)
+    public function getLeads($type)
     {
         $result = array();
         switch ($type) {
             case 'contactUs':
                 $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+                break;
+            
+            default:
+                return "";
+                break;
+        }
+        return $result;
+    }
+
+    public function getSettings($type)
+    {
+        $result = array();
+        $result = array();
+        switch ($type) {
+            case 'website':
+                $result = $this->common->get_data("tbl_settings",array("setting_type"=>"website","status"=>"1"),array("id","setting_type","name","display_name","value"),"multiple");
                 break;
             
             default:

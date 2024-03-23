@@ -24,7 +24,7 @@ class Dashboard extends BaseController
 
         $data = array();
         $data['page'] = "dashboard";
-        $data['leads'] = $this->apiController->getAllLeads("contactUs");
+        $data['leads'] = $this->apiController->getLeads("contactUs");
         // echo '<pre>';print_r($data);die;
         return view(DASHBOARD_VIEW . '/dashboard', $data);
     }

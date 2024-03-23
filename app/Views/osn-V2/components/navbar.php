@@ -21,6 +21,7 @@
             <a href="<?= base_url("/contact-us") ?>" class="nav-item nav-link <?= $page == "contact-us" ? "active" : "" ?>">Contact</a>
         </div>
         <?php
+        if (HEADER_LOGIN_BTN) {
             $session = session();
             $usersession = $session->get('usersession');
             if (isset($usersession['isLoggedIn']) && $usersession['isLoggedIn']) {
@@ -36,6 +37,7 @@
             </a>
             <?php
             }
+        }
         ?>
     </div>
 </nav>
