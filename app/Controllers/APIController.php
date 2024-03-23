@@ -573,12 +573,28 @@ class APIController extends BaseController
         }
     }
 
-    public function getAllLeads($type)
+    public function getLeads($type)
     {
         $result = array();
         switch ($type) {
             case 'contactUs':
                 $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+                break;
+            
+            default:
+                return "";
+                break;
+        }
+        return $result;
+    }
+
+    public function getSettings($type)
+    {
+        $result = array();
+        $result = array();
+        switch ($type) {
+            case 'website':
+                $result = $this->common->get_data("tbl_settings",array("setting_type"=>"website","status"=>"1"),array("id","setting_type","name","display_name","value"),"multiple");
                 break;
             
             default:

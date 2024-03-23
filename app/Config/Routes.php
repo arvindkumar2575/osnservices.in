@@ -23,11 +23,13 @@ $routes->get('contact-us', 'OsnV2::contactUs');
 
 
 
+if (HEADER_LOGIN_BTN) {
 // user routes 
-$routes->match(['get', 'post'], 'login', 'User::login', ["filter" => "authFilter"]);
-$routes->match(['get', 'post'], 'register', 'User::register');
-$routes->get('logout', 'User::logout');
-$routes->get('verification', 'User::verification');
+    $routes->match(['get', 'post'], 'login', 'User::login', ["filter" => "authFilter"]);
+    $routes->match(['get', 'post'], 'register', 'User::register');
+    $routes->get('logout', 'User::logout');
+    $routes->get('verification', 'User::verification');
+
 
 
 // dashboard routes 
@@ -39,6 +41,7 @@ $routes->match(['get', 'post'], 'admin/users', 'Admin::users', ["filter" => "aut
 $routes->match(['get', 'post'], 'admin/pages', 'Admin::pages', ["filter" => "authFilter"]);
 $routes->match(['get', 'post'], 'admin/media', 'Admin::media', ["filter" => "authFilter"]);
 
+}
 
 // other routes
 $routes->match(['get', 'post'], 'api/newsSubscribe', 'OsnV2::newsSubscribe');
