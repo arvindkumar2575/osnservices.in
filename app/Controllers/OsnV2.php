@@ -31,13 +31,15 @@ class OsnV2 extends BaseController
         return view(OSN_VIEW_V2.'/pages/'.$data['page'],$data);
     }
 
+    
     public function services()
     {
-        $data=array();
-        $data['page']="services";
-        $data['title']=ucwords(strtolower(str_replace("-"," ",$data['page'])));
+        return redirect()->to("/");
+        // $data=array();
+        // $data['page']="services";
+        // $data['title']=ucwords(strtolower(str_replace("-"," ",$data['page'])));
         // echo '<pre>';print_r($data);die;
-        return view(OSN_VIEW_V2.'/pages/'.$data['page'],$data);
+        // return view(OSN_VIEW_V2.'/pages/'.$data['page'],$data);
     }
 
     public function servicesPages($page)
@@ -52,7 +54,7 @@ class OsnV2 extends BaseController
             // echo '<pre>';print_r($data);die;
             return view(OSN_VIEW_V2.'/pages/'.$page,$data);
         }else{
-            return redirect()->to("/services");
+            return redirect()->to("/");
         }
     }
 

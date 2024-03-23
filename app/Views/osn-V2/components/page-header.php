@@ -4,7 +4,7 @@
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="text-white" href="<?= base_url("/") ?>">Home</a></li>
-                <li class="breadcrumb-item"><a class="text-white" href="javascript:void(0)" style="cursor: default;">Pages</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="javascript:void(0)" style="cursor: default;">Service</a></li>
                 <li class="breadcrumb-item text-white active" aria-current="page"><?= $title ?></li>
             </ol>
         </nav>
