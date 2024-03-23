@@ -5,8 +5,8 @@
                 <h4 class="text-light mb-4">Address</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Uttam Nagar, New Delhi</p>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Delhi, India - 110059</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 882 625 3640</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@osnservices.in</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+91 882 625 3640">+91 882 625 3640</a></p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:info@osnservices.in">info@osnservices.in</a></p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

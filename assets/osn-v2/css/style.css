@@ -5,6 +5,10 @@
     --dark: #353535;
 }
 
+.primary-color {
+    color: var(--primary);
+}
+
 .fw-medium {
     font-weight: 500 !important;
 }
@@ -647,4 +651,9 @@
 
 .red-border{
     border: solid 1px red !important;
+}
+
+
+.main .main-heading{
+    margin-top: 1rem;
 }

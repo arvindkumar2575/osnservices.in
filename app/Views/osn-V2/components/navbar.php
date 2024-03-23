@@ -9,18 +9,15 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="<?= base_url("/") ?>" class="nav-item nav-link  <?= $page == "home" ? "active" : "" ?>">Home</a>
             <a href="<?= base_url("/about-us") ?>" class="nav-item nav-link  <?= $page == "about-us" ? "active" : "" ?>">About</a>
-            <a href="<?= base_url("/services") ?>" class="nav-item nav-link  <?= $page == "services" ? "active" : "" ?>">Services</a>
-            <?php /*
-            <a href="<?= base_url("/projects") ?>" class="nav-item nav-link  <?= $page == "projects" ? "active" : "" ?>">Projects</a>
             <div class="nav-item dropdown">
-                <span class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</span>
+                <span class="nav-link dropdown-toggle <?= str_contains(current_url(),"/services/") ? "active" : "" ?>" data-bs-toggle="dropdown">Services</span>
                 <div class="dropdown-menu fade-up m-0">
-                    <a href="<?= base_url("/free-quote") ?>" class="dropdown-item">Free Quote</a>
-                    <a href="<?= base_url("/our-team") ?>" class="dropdown-item">Our Team</a>
-                    <a href="<?= base_url("/testimonials") ?>" class="dropdown-item">Testimonial</a>
+                    <a href="<?= base_url("services/income-tax-return") ?>" class="dropdown-item <?= $page == "income-tax-return" ? "active" : "" ?>">ITR Filing</a>
+                    <a href="<?= base_url("services/web-development") ?>" class="dropdown-item <?= $page == "web-development" ? "active" : "" ?>">Web Development</a>
+                    <a href="<?= base_url("services/dashboard") ?>" class="dropdown-item <?= $page == "dashboard" ? "active" : "" ?>">Dashboard</a>
+                    <a href="<?= base_url("services/digital-marketing") ?>" class="dropdown-item <?= $page == "digital-marketing" ? "active" : "" ?>">Digital Marketing</a>
                 </div>
             </div>
-            */ ?>
             <a href="<?= base_url("/contact-us") ?>" class="nav-item nav-link <?= $page == "contact-us" ? "active" : "" ?>">Contact</a>
         </div>
         <a href="<?= base_url("/login") ?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
