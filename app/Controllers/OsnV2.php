@@ -42,18 +42,13 @@ class OsnV2 extends BaseController
 
     public function servicesPages($page)
     {
-        $path = APPPATH.'views/'.OSN_VIEW_V2.'/pages/'.$page.'.php';
-        if(file_exists($path)){
-            $data=array();
-            $data['page']=$page;
-            $data['title']=ucwords(strtolower(str_replace("-"," ",$page)));
-            $data['header_desc']="";
-            // $data['about_us_content']= $this->settings->get_page_settings('about_us');
-            // echo '<pre>';print_r($data);die;
-            return view(OSN_VIEW_V2.'/pages/'.$page,$data);
-        }else{
-            return redirect()->to("/");
-        }
+        $data=array();
+        $data['page']=$page;
+        $data['title']=ucwords(strtolower(str_replace("-"," ",$page)));
+        $data['header_desc']="";
+        // $data['about_us_content']= $this->settings->get_page_settings('about_us');
+        // echo '<pre>';print_r($data);die;
+        return view(OSN_VIEW_V2.'/pages/'.$page,$data);
     }
 
     public function projects()
