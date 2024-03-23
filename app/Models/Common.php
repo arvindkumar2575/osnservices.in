@@ -38,7 +38,7 @@ class Common extends Model
     {
         $query=false;
         if(isset($table)){
-            $query = $this->db->table($table)->update($data,$where);
+            $query = $this->db->table($table)->where($where)->update($data);
             // echo $this->db->lastQuery;die();
         }
         return $query;

@@ -10,8 +10,8 @@
             <a href="<?= base_url("/") ?>" class="nav-item nav-link  <?= $page == "home" ? "active" : "" ?>">Home</a>
             <a href="<?= base_url("/about-us") ?>" class="nav-item nav-link  <?= $page == "about-us" ? "active" : "" ?>">About</a>
             <a href="<?= base_url("/services") ?>" class="nav-item nav-link  <?= $page == "services" ? "active" : "" ?>">Services</a>
-            <a href="<?= base_url("/projects") ?>" class="nav-item nav-link  <?= $page == "projects" ? "active" : "" ?>">Projects</a>
             <?php /*
+            <a href="<?= base_url("/projects") ?>" class="nav-item nav-link  <?= $page == "projects" ? "active" : "" ?>">Projects</a>
             <div class="nav-item dropdown">
                 <span class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</span>
                 <div class="dropdown-menu fade-up m-0">

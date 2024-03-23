@@ -23,7 +23,7 @@
         </div>
         <div class="card-body lead-table-div">
             <div>
-                <a href="<?=base_url('admin/users')?>">Admin</a>
+                <a href="<?=base_url('admin/users')?>">Users</a>
             </div>
             <div>
                 <a href="<?=base_url('admin/pages')?>">Pages</a>

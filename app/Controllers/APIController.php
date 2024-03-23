@@ -236,6 +236,24 @@ class APIController extends BaseController
         $html = '';
         $formname = $request->getVar("formname");
         switch ($formname) {
+            case 'users':
+                // echo "<pre>";var_dump("users");die;
+                $data = array();
+                $data['formname'] = $formname;
+                $data['action'] = $request->getVar("action");
+                if ($data['action'] == 'add') {
+                    $html = view(DASHBOARD_VIEW . '/components/forms/add-edit-users', $data);
+                } else if ($data['action'] == 'edit') {
+                    $page_id = $request->getVar("attr_id");
+                    $pageData = $this->common->get_data("tbl_users", array("id" => $page_id));
+                    $data = array_merge($data, $pageData);
+                    // echo "<pre>";print_r($data);die;
+                    $html = view(DASHBOARD_VIEW . '/components/forms/add-edit-users', $data);
+                } else if ($data['action'] == 'delete') {
+                    $data['id'] = $request->getVar("attr_id");
+                    $html = view(DASHBOARD_VIEW . '/components/forms/delete-users', $data);
+                }
+                break;
             case 'pages':
                 $data = array();
                 $data['formname'] = $formname;
@@ -297,6 +315,56 @@ class APIController extends BaseController
         // echo microtime(true);
         // echo '<pre>';print_r($data);die;
         switch ($data['formname']) {
+            case 'users':
+                // echo '<pre>';var_dump("aaa");die;
+                $currentDate = new DateTime();
+                if ($data['action'] == 'add') {
+                    $savedata = array(
+                        'user_type' => $data['user_type'],
+                        'first_name' => $data['first_name'],
+                        'last_name' => $data['last_name'],
+                        'username' => $data['username'],
+                        'password' => md5($data['password']),
+                        'verified' => $data['verified'],
+                        'status' => $data['status'],
+                        "verification_code" => md5($data['username']),
+                        'created_at' => $currentDate->format('Y-m-d H:i:s'),
+                        'updated_at' => $currentDate->format('Y-m-d H:i:s'),
+                    );
+                    // echo '<pre>';print_r($savedata);die;
+                    $save_id = $this->common->data_insert('tbl_users', $savedata);
+                    if ($save_id) {
+                        $result['user_id'] = $save_id;
+                    }
+                } else if ($data['action'] == 'edit') {
+                    // echo '<pre>';var_dump($data);die;
+                    $savedata = array(
+                        'user_type' => $data['user_type'],
+                        'first_name' => $data['first_name'],
+                        'last_name' => $data['last_name'],
+                        'username' => $data['username'],
+                        'verified' => $data['verified'],
+                        'status' => $data['status'],
+                        'updated_at' => $currentDate->format('Y-m-d H:i:s'),
+                    );
+                    $page_id = $request->getVar("attr_id");
+                    $save_id = $this->common->data_update('tbl_users', array('id' => $page_id), $savedata);
+                    if ($save_id) {
+                        $result['page_id'] = $save_id;
+                    }
+                } else if ($data['action'] == 'delete') {
+                    $page_id = $request->getVar("attr_id");
+                    $savedata = array(
+                        'status' => '0',
+                        'updated_at' => $currentDate->format('Y-m-d H:i:s')
+                    );
+                    $save_id = $this->common->data_update('tbl_users', array('id' => $page_id), $savedata);
+                    if ($save_id) {
+                        $result['page_id'] = $save_id;
+                    }
+                }
+                break;
+
             case 'pages':
                 if ($data['action'] == 'add') {
                     $savedata = array(

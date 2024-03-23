@@ -16,14 +16,14 @@
         <div class="card-header d-flex justify-content-between">
             <span>
                 <i class="fas fa-table me-1"></i>
-                Pages
+                Users
             </span>
             <span class="right">
-                <span class="pages-btn-add" type="button" data-formname="pages" data-action="add"><i class="fas fa-plus-square blue-color"></i> New Page</span>
+                <span class="users-btn-add" type="button" data-formname="users" data-action="add"><i class="fas fa-plus-square blue-color"></i> New Users</span>
             </span>
         </div>
         <?php
-        if(isset($pages) && count($pages)>0){
+        if(isset($users) && count($users)>0){
         ?>
         <div class="card-body lead-table-div">
             <table id="pages-table">
@@ -38,16 +38,15 @@
                 <tbody>
                     <?php
                     $i = 1;
-                    foreach ($pages as $key => $value) {
+                    foreach ($users as $key => $value) {
                         ?>
                     <tr class="<?= $value['status']==1?'':'row-inactive' ?>" data-attr_id="<?=$value['id']?>">
                         <td><?=$i?></td>
-                        <td><?=$value['name']?></td>
-                        <td>/<?=$value['slug']?></td>
+                        <td><?=$value['first_name']." ".$value['last_name']?></td>
+                        <td><?=$value['username']?></td>
                         <td>
-                            <span class="me-2 pages-btn-edit" type="button" data-formname="pages" data-action="edit" data-attr_id="<?=$value['id']?>"><i class="fas fa-edit green-color"></i></span>
-                            <span class="me-2 pages-btn-delete" role="button" data-formname="pages" data-action="delete" data-attr_id="<?=$value['id']?>"><i class="fas fa-solid fa-trash red-color"></i></span>
-                            <span class="me-2 pages-btn-design" role="button" data-formname="pages" data-action="design" data-attr_id="<?=$value['id']?>"><i class="fas fa-drafting-compass blue-color"></i></span>
+                            <span class="me-2 users-btn-edit" type="button" data-formname="users" data-action="edit" data-attr_id="<?=$value['id']?>"><i class="fas fa-edit green-color"></i></span>
+                            <span class="me-2 users-btn-delete" role="button" data-formname="users" data-action="delete" data-attr_id="<?=$value['id']?>"><i class="fas fa-solid fa-trash red-color"></i></span>
                         </td>
                     </tr>
                     <?php
@@ -61,7 +60,7 @@
         <?php
         }else{
         ?>
-        <div class="card-body text-center">There is no pages setup.</div>
+        <div class="card-body text-center">There is no users.</div>
         <?php
         }
         ?>

@@ -175,14 +175,13 @@
     </div>
     <!-- Feature End -->
 
-
+<?php /*
     <!-- Projects Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-5">Our Projects</h1>
             </div>
-            <?php /*
             <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-12 text-center">
                     <ul class="list-inline mb-5" id="portfolio-flters">
@@ -192,7 +191,7 @@
                     </ul>
                 </div>
             </div>
-            */ ?>
+            
             <div class="row g-4 portfolio-container">
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
@@ -288,7 +287,7 @@
         </div>
     </div>
     <!-- Projects End -->
-
+*/ ?>
 
     <!-- Testimonial Start -->
     <?= view(OSN_VIEW_V2 . '/components/testimonials') ?>

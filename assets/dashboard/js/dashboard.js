@@ -67,7 +67,7 @@ $(document).ready(function () {
                     let e = $('.short-popup-msg').find('.popup-msg-progressbar')
                     app.fillProgress(e)
                     setInterval(() => {
-                        window.location.href = BASE_URL + "/dashboard";
+                        window.location.href = BASE_URL + "/admin/dashboard";
                     }, 2000);
                 } else {
                     let message = res.message
@@ -284,6 +284,9 @@ $(document).ready(function () {
         })
     });
 
+
+
+
     $(".video-url-link").on("click",function(){
         let video_link = $(this).data('id')
         if(video_link!=undefined && video_link!=null && video_link!=''){
@@ -331,7 +334,7 @@ $(document).ready(function () {
     
     //######################################################### add pages form  #####################################################
 
-    $(document).on('click','.pages-btn-add, .pages-btn-edit, .pages-btn-delete, .pages-btn-design, .media-btn-add, .media-btn-edit, .media-btn-delete',function(){
+    $(document).on('click','.users-btn-add, .users-btn-edit, .users-btn-delete, .pages-btn-add, .pages-btn-edit, .pages-btn-delete, .pages-btn-design, .media-btn-add, .media-btn-edit, .media-btn-delete',function(){
         let data = {}
         data.formname = $(this).data('formname')
         data.action = $(this).data('action')
@@ -353,7 +356,7 @@ $(document).ready(function () {
         formDiv.hide()
     })
 
-    $(document).on("submit","form#add-ae-pages-form, form#edit-ae-pages-form, form#delete-ae-pages-form, form#delete-ae-media-form",function(e){
+    $(document).on("submit","form#add-ae-users-form, form#edit-ae-users-form, form#delete-ae-users-form, form#add-ae-pages-form, form#edit-ae-pages-form, form#delete-ae-pages-form, form#delete-ae-media-form",function(e){
         e.preventDefault()
         let data = {}
         data.valid = false
@@ -423,6 +426,18 @@ $(document).ready(function () {
 
 function dataObjectConversionFromFormData(data,form){
     switch (data.formname) {
+        case "users":
+            if(data.action!="add"){
+                data.attr_id = $(form).find("input[name=attr_id]").val()
+            }
+            data.user_type = $(form).find("select[name=user_type]").val()
+            data.first_name = $(form).find("input[name=first_name]").val()
+            data.last_name = $(form).find("input[name=last_name]").val()
+            data.username = $(form).find("input[name=username]").val()
+            data.password = $(form).find("input[name=password]").val()
+            data.verified = $(form).find("select[name=verified]").val()
+            data.status = $(form).find("select[name=status]").val()
+            break;
         case "pages":
             if(data.action!="add"){
                 data.attr_id = $(form).find("input[name=attr_id]").val()
