@@ -657,3 +657,9 @@
 .main .main-heading{
     margin-top: 1rem;
 }
+
+
+.download-link-container, .view-dashboard-link-container{
+    display: flex;
+    align-items: flex-end;
+}

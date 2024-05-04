@@ -103,7 +103,7 @@ define('PAGES_LIST', array("about-us", "contact-us", "projects", "services"));
 
 
 define('FREE_EXCEL_PLAY', false);
-define('HEADER_LOGIN_BTN', false);
+define('HEADER_LOGIN_BTN', true);
 define('PAID_EXCEL_PLAY', false);
 define('ADMIN_PANEL', true);
 

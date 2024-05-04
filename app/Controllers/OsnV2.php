@@ -48,7 +48,7 @@ class OsnV2 extends BaseController
         $data['header_desc']="";
         // $data['about_us_content']= $this->settings->get_page_settings('about_us');
         // echo '<pre>';print_r($data);die;
-        return view(OSN_VIEW_V2.'/pages/'.$page,$data);
+        return view(OSN_VIEW_V2.'/services/'.$page,$data);
     }
 
     public function projects()
@@ -90,6 +90,42 @@ class OsnV2 extends BaseController
         $result = array('status' => false, 'message' => ENTER_WRONG_URL);
         return json_encode($result);
     }
+
+    public function taxCalculator()
+    {
+        if ($this->request->isAJAX()) {
+            $result = $this->apiController->taxCalculator($this->request);
+            return json_encode($result);
+        }
+        $data=array();
+        $data['page']="tax-calculator";
+        $data['title']=ucwords(strtolower(str_replace("-"," ",$data['page'])));
+        // echo '<pre>';print_r($data);die;
+        return view(OSN_VIEW_V2.'/onepage-app/'.$data['page'],$data);
+    }
+
+
+    // excel dashboard demo url 
+    public function demoExcelDashboard()
+    {
+        if ($this->request->isAJAX()) {
+            $result = $this->apiController->taxCalculator($this->request);
+            return json_encode($result);
+        }
+        $data=array();
+        $data['page']="demo-excel-dashboard";
+        $data['title']=ucwords(strtolower(str_replace("-"," ",$data['page'])));
+        // echo '<pre>';print_r($data);die;
+        return view(OSN_VIEW_V2.'/onepage-app/'.$data['page'],$data);
+    }
+
+
+
+
+
+
+
+
 
 
 

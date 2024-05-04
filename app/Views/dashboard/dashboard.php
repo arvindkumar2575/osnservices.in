@@ -52,8 +52,8 @@
                             <td><?=$value['reason_options']?></td>
                             <td>
                                 <?=$value['updated_at']?>
-                                <span class="me-2 users-btn-edit" type="button" data-formname="users" data-action="edit" data-attr_id="<?=$value['id']?>"><i class="fas fa-edit green-color"></i></span>
-                                <span class="me-2 users-btn-delete" role="button" data-formname="users" data-action="delete" data-attr_id="<?=$value['id']?>"><i class="fas fa-solid fa-trash red-color"></i></span>
+                                <span class="me-2 lead-btn-edit" type="button" data-formname="lead" data-action="edit" data-attr_id="<?=$value['id']?>"><i class="fas fa-edit green-color"></i></span>
+                                <span class="me-2 lead-btn-delete" role="button" data-formname="lead" data-action="delete" data-attr_id="<?=$value['id']?>"><i class="fas fa-solid fa-trash red-color"></i></span>
                             </td>
                             
                         </tr>

@@ -247,5 +247,38 @@
         }
     }
 
+
+    // demo excel dashboard 
+    
+    let demo_dashboard_form = $(".demo-excel-dashboard-form")
+    let download_template_link = $(".download_template_link")
+    let upload_template = $(".upload_template")
+    let view_excel_dashboard = $(".view_excel_dashboard")
+    let selected_template
+    $("select#template_type").on("change", function(e){
+        selected_template = $(this).val()
+        if(selected_template!=null && selected_template!=""){
+            download_template_link.attr("href",BASE_URL+"assets/files/"+selected_template+".xlsx")
+            download_template_link.css("display","block")
+        } else{
+            download_template_link.css("display","none")
+        }
+        upload_template.css("display","none")
+        view_excel_dashboard.css("display","none")
+    })
+    $("a.download_template_link").on("click", function(e){
+        upload_template.css("display","block")
+    })
+    $("input#upload_template_type").on("change", function(e){
+        view_excel_dashboard.css("display","block")
+    })
+
+    $(".view_excel_dashboard").on("click", function(e){
+        
+        if(selected_template!=null && selected_template!=""){
+            console.log(demo_dashboard_form)
+        }
+    })
+
 })(jQuery);
 

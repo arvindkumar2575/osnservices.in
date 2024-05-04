@@ -13,7 +13,7 @@
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                 <small class="fa fa-phone-alt text-primary me-2"></small>
-                <small><a href="tel:+91 882 625 3640">+91 882 625 3640</a></small>
+                <small><a href="tel:+91 931 105 0523">+91 931 105 0523</a></small>
             </div>
             <div class="h-100 d-inline-flex align-items-center">
                 <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>

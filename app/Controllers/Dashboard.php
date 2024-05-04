@@ -18,7 +18,7 @@ class Dashboard extends BaseController
     public function dashboard()
     {
         if($this->request->isAJAX()){
-            $result = $this->apiController->userLogin($this->request);
+            $result = $this->apiController->leads($this->request);
             return json_encode($result);            
         }
 

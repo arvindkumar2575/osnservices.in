@@ -565,6 +565,7 @@ class APIController extends BaseController
         // echo "<pre>";print_r($savedata);die;
         $save_id = $this->common->data_insert('tbl_contact_form', $savedata);
         if ($save_id) {
+            $this->sendMail($savedata);
             $result = array('status' => true, 'message' => 'Your details are saved.<br>Our representative will contact you soon!');
             return $result;
         } else {
@@ -573,11 +574,55 @@ class APIController extends BaseController
         }
     }
 
+    private function sendMail($data){
+        $email = \Config\Services::email();
+
+        $email->setFrom('info@osnservices.in', 'OSN Services');
+        $email->setTo($data['email_id']);
+        $email->setBCC('osnservices.in@gmail.com');
+
+        $email->setSubject($data['reason_options']);
+        $body = "
+        Hi ".$data['first_name'].",\n\n
+        Thanks for contacting to OSN Services.\n
+        We will connect you once your below query get reviewed by our representative.\n
+        Your Phone Number: ".$data['mobile_no']."\n
+        ".$data['default_message']."\n\n
+        Thanks
+        Tina Sharma\n
+        OSN Service Team
+        ";
+        $email->setMessage($body);
+
+        $email->send();
+    }
+
+    public function taxCalculator($request){
+        $result = array('status' => false, 'message' => 'Please try again!');
+        return $result;
+    }
+
     public function getLeads($type)
     {
         $result = array();
         switch ($type) {
             case 'contactUs':
+                $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+                break;
+            
+            default:
+                return "";
+                break;
+        }
+        return $result;
+    }
+
+    public function leads($request)
+    {
+        $result = array();
+        $type = $request->getVar("type");
+        switch ($type) {
+            case 'single-edit':
                 $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
                 break;
             
