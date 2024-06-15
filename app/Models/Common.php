@@ -90,7 +90,7 @@ class Common extends Model
         return $result;
     }
 
-    public function get_data($table=null, $where=array(), $select=array(), $type='single')
+    public function get_data($table=null, $where=array(), $select=array(), $type='single', $offset=0, $limit=10)
     {
         $result=null;
         if(count($select)>0){
@@ -98,9 +98,9 @@ class Common extends Model
         }
         if(isset($table)){
             if(!empty($select)){
-                $query = $this->db->table($table)->where($where)->select($select)->get();
+                $query = $this->db->table($table)->where($where)->select($select)->limit($limit,$offset)->get();
             }else{
-                $query = $this->db->table($table)->where($where)->get();
+                $query = $this->db->table($table)->where($where)->limit($limit,$offset)->get();
             }
             if($type=='single'){
                 $result = $query->getRowArray();
@@ -124,6 +124,24 @@ class Common extends Model
             // echo"<pre>"; var_dump($result);die();
         }
         return $result;
+    }
+
+    public function get_count($table=null, $where=array())
+    {
+        $query=false;
+        if(isset($table)){
+            if(!empty($where)){
+                $query = $this->db->table($table)->where($where);
+            }else{
+                $query = $this->db->table($table);
+            }
+            $count = $query->countAll();
+            // echo $this->db->lastQuery;die();
+            return $count;
+        }else{
+            return $query;
+        }
+        
     }
 
 

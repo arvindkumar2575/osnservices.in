@@ -19,14 +19,30 @@ class Dashboard extends BaseController
     {
         if($this->request->isAJAX()){
             $result = $this->apiController->leads($this->request);
-            return json_encode($result);            
+            return json_encode($result);
         }
 
         $data = array();
         $data['page'] = "dashboard";
-        $data['leads'] = $this->apiController->getLeads("contactUs");
+        $data['leadCounts'] = $this->apiController->getLeads($this->request,"leadCounts");
         // echo '<pre>';print_r($data);die;
         return view(DASHBOARD_VIEW . '/dashboard', $data);
+    }
+
+    public function queries()
+    {
+        if($this->request->isAJAX()){
+            $result = $this->apiController->leads($this->request);
+            return json_encode($result);
+        }
+
+        $data = array();
+        $data['parent'] = "dashboard";
+        $data['page'] = "queries";
+        $data['pagination'] = $this->apiController->getPagination($this->request,"contact_form");
+        $data['leads'] = $this->apiController->getLeads($this->request,"contactUs");
+        // echo '<pre>';print_r($data);die;
+        return view(DASHBOARD_VIEW . '/pages/queries', $data);
     }
 
 

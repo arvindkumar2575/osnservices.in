@@ -4,17 +4,27 @@
                 <div class="nav">
 
                     <?php
-                    $active='';
-                    if(isset($parent) && $parent=='dashboard'){
+                    $active='';$q_active='';
+                    if((isset($parent) && $parent=='dashboard') || (isset($page) && $page=='dashboard')){
                         $active='active';
-                    }else if(isset($page) && $page=='dashboard'){
-                        $active='active';
+                    }
+                    if(str_contains(current_url(), 'dashboard/queries')){
+                        $q_active='active';
                     }
                     ?>
                     <a class="nav-link <?=$active?>" href="<?=base_url("dashboard")?>">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
+
+                    <li class="left-nav-padding-1rem">
+                        <a class="nav-link <?=$q_active?>" href="<?=base_url("dashboard/queries")?>">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Queries
+                        </a>
+
+                    </li>
+
 
                     <?php
                     $active='';
@@ -28,27 +38,7 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Admin
                     </a>
-
-                    
-                    <?php /* 
-                    <a class="nav-link <?=$type==1?'active':''?>" href="<?=base_url("/crm/visitor-visa")?>">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Visitor Visa
-                    </a>
-                    <a class="nav-link <?=$type==2?'active':''?>" href="<?=base_url("/crm/study-visa")?>">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Study Visa
-                    </a>
-                    <a class="nav-link <?=$type==3?'active':''?>" href="<?=base_url("/crm/work-visa")?>">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Work Visa
-                    </a> 
-                    */ ?>
                 </div>
             </div>
-            <?php /*<div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
-                Start Bootstrap
-            </div>*/ ?>
         </nav>
     </div>

@@ -36,6 +36,7 @@ if (HEADER_LOGIN_BTN) {
 
     // dashboard routes 
     $routes->get('dashboard', 'Dashboard::dashboard', ["filter" => "authFilter"]);
+    $routes->get('dashboard/queries', 'Dashboard::queries', ["filter" => "authFilter"]);
 
     // admin routes 
     $routes->get('admin', 'Admin::admin', ["filter" => "authFilter"]);

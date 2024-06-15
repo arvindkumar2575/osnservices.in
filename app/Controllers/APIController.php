@@ -602,14 +602,21 @@ class APIController extends BaseController
         return $result;
     }
 
-    public function getLeads($type)
+    public function getLeads($request,$type)
     {
         $result = array();
         switch ($type) {
             case 'contactUs':
-                $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+                $page = $request->getVar("page")??0;
+                $per_page_data = 10;
+                $offset = $per_page_data*($page<=1?0:$page-1);
+                $limit = $per_page_data;
+                $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple", $offset, $limit);
                 break;
-            
+            case 'leadCounts':
+                $result = $this->common->get_count("tbl_contact_form",array("status"=>"0"));
+                break;
+                
             default:
                 return "";
                 break;
@@ -645,6 +652,47 @@ class APIController extends BaseController
             default:
                 return "";
                 break;
+        }
+        return $result;
+    }
+
+    public function getPagination($request,$table=null)
+    {
+        $result = array();
+        if(!isset($table) || empty($table)) {
+            $result = array('status' => false, 'message' => 'Something goes wrong, please try again!');
+        }else{
+            $offset = $request->getVar("offset")??0;
+            $limit = $request->getVar("limit")??10;
+            $pages = 0;
+            $page = $request->getVar("page")??0;
+            $total_count = $this->common->get_count("tbl_".$table);
+            $back = "";
+            $next = "";
+            if($total_count>0 && $total_count>=$limit){
+                $pages = ceil($total_count / $limit);
+                $page = $page<=0?1:($pages>$page?$page:$pages);
+                if(($page-1)>=1 && ($page-1)<=$pages){
+                    $back = current_url()."?page=".$page-1;
+                }else{
+                    $back = "";
+                }
+                if(($page+1)>=2 && ($page+1)<=$pages){
+                    $next = current_url()."?page=".$page+1;
+                }else{
+                    $next = "";
+                }
+            }
+            $result = array(
+                'status' => $pages>1, 
+                'count' => $total_count, 
+                'pages' => $pages, 
+                'page' => $page, 
+                'links' => array(
+                    'back' => $back, 
+                    'next' => $next
+                )
+            );
         }
         return $result;
     }

@@ -99,3 +99,33 @@ footer.footer .content{
     background-color: #ddd;
 }
 
+.bg-grey{
+    background-color: #ddd;
+}
+.bnav-btn{
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+.bnav-btn:not(.none-anchor):hover{
+    background-color: #bbb;
+}
+.grey-background{
+    background-color: #bbb;
+}
+.none-anchor{
+    cursor: default;
+    opacity: 0.4;
+}
+.anchor-disabled{
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.4;
+}
+.pagination-anchor-btn{
+    text-decoration: none;
+}
+
+.left-nav-padding-1rem{
+    padding-left: 1rem;
+}
