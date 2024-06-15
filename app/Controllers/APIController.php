@@ -616,6 +616,9 @@ class APIController extends BaseController
             case 'leadCounts':
                 $result = $this->common->get_count("tbl_contact_form",array("status"=>"0"));
                 break;
+            case 'news_subscribe':
+                $result = $this->common->get_data("tbl_news_subscribe",array(),array("id","email","status","updated_at"),"multiple");
+                break;
                 
             default:
                 return "";
@@ -629,8 +632,13 @@ class APIController extends BaseController
         $result = array();
         $type = $request->getVar("type");
         switch ($type) {
-            case 'single-edit':
-                $result = $this->common->get_data("tbl_contact_form",array("status"=>"0"),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+            case 'single-edit-lead':
+                $id = $request->getVar("id");
+                $result = $this->common->get_data("tbl_contact_form",array("status"=>"0","id"=>$id),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
+                break;
+            case 'single-edit-subscribe':
+                $id = $request->getVar("id");
+                $result = $this->common->get_data("tbl_news_subscribe",array("status"=>"0","id"=>$id),array("id","first_name","last_name","email_id","mobile_no","reason_options","default_message","created_at","updated_at","lead_conversion"),"multiple");
                 break;
             
             default:

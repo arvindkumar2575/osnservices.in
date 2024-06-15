@@ -4,12 +4,15 @@
                 <div class="nav">
 
                     <?php
-                    $active='';$q_active='';
+                    $active='';$q_active='';$s_active='';
                     if((isset($parent) && $parent=='dashboard') || (isset($page) && $page=='dashboard')){
                         $active='active';
                     }
                     if(str_contains(current_url(), 'dashboard/queries')){
                         $q_active='active';
+                    }
+                    if(str_contains(current_url(), 'dashboard/subscribe')){
+                        $s_active='active';
                     }
                     ?>
                     <a class="nav-link <?=$active?>" href="<?=base_url("dashboard")?>">
@@ -21,6 +24,10 @@
                         <a class="nav-link <?=$q_active?>" href="<?=base_url("dashboard/queries")?>">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Queries
+                        </a>
+                        <a class="nav-link <?=$s_active?>" href="<?=base_url("dashboard/subscribe")?>">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Subscribe
                         </a>
 
                     </li>

@@ -25,7 +25,7 @@ $routes->get('demo-excel-dashboard', 'OsnV2::demoExcelDashboard');
 
 
 
-if (HEADER_LOGIN_BTN) {
+// if (HEADER_LOGIN_BTN) {
 // user routes 
     $routes->match(['get', 'post'], 'login', 'User::login', ["filter" => "authFilter"]);
     // $routes->match(['get', 'post'], 'register', 'User::register');
@@ -37,6 +37,7 @@ if (HEADER_LOGIN_BTN) {
     // dashboard routes 
     $routes->get('dashboard', 'Dashboard::dashboard', ["filter" => "authFilter"]);
     $routes->get('dashboard/queries', 'Dashboard::queries', ["filter" => "authFilter"]);
+    $routes->get('dashboard/subscribe', 'Dashboard::subscribe', ["filter" => "authFilter"]);
 
     // admin routes 
     $routes->get('admin', 'Admin::admin', ["filter" => "authFilter"]);
@@ -44,7 +45,7 @@ if (HEADER_LOGIN_BTN) {
     $routes->match(['get', 'post'], 'admin/pages', 'Admin::pages', ["filter" => "authFilter"]);
     $routes->match(['get', 'post'], 'admin/media', 'Admin::media', ["filter" => "authFilter"]);
 
-}
+// }
 
 // other routes
 $routes->match(['get', 'post'], 'api/newsSubscribe', 'OsnV2::newsSubscribe');
