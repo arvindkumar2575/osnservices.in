@@ -53,6 +53,10 @@
                     </div>
                 </div>
 
+                <div class="editor-section">
+                    <textarea id="summernote-editor" name="editordata"></textarea>
+                </div>
+
                 <?php /*
                 $options = '';
                 $designs = '';

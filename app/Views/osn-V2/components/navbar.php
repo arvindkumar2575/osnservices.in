@@ -20,24 +20,6 @@
             </div>
             <a href="<?= base_url("/contact-us") ?>" class="nav-item nav-link <?= $page == "contact-us" ? "active" : "" ?>">Contact</a>
         </div>
-        <?php
-        if (HEADER_LOGIN_BTN) {
-            $session = session();
-            $usersession = $session->get('usersession');
-            if (isset($usersession['isLoggedIn']) && $usersession['isLoggedIn']) {
-                ?>
-                <a href="<?= base_url("dashboard") ?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-                    <span>Dashboard<i class="fa fa-arrow-right ms-3"></i></span>
-                </a>
-            <?php
-            } else {
-            ?>
-            <a href="<?= base_url("/login") ?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-                <span>LogIn/SignUp<i class="fa fa-arrow-right ms-3"></i></span>
-            </a>
-            <?php
-            }
-        }
-        ?>
+        
     </div>
 </nav>

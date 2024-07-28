@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Common;
+use App\Models\Components;
 use App\Models\Media;
 use App\Models\Pages;
 use App\Models\Settings;
@@ -17,6 +18,7 @@ class Admin extends BaseController
     protected $users;
     protected $pages;
     protected $media;
+    protected $components;
     public function __construct()
     {
         $this->apiController = new APIController;
@@ -26,6 +28,7 @@ class Admin extends BaseController
         $this->users = new Users();
         $this->pages = new Pages();
         $this->media = new Media();
+        $this->components = new Components();
     }
 
     public function to404() {
@@ -42,6 +45,9 @@ class Admin extends BaseController
         $data = array();
         $data['page'] = "admin";
         $data['settings'] = $this->settings->get_all_settings();
+        $data['userCounts'] = $this->apiController->getLeads($this->request,"userCounts");
+        $data['pageCounts'] = $this->apiController->getLeads($this->request,"pageCounts");
+        $data['mediaCounts'] = $this->apiController->getLeads($this->request,"mediaCounts");
         // echo '<pre>';print_r($data);die;
         return view(DASHBOARD_VIEW . '/admin', $data);
     }
@@ -156,6 +162,43 @@ class Admin extends BaseController
         $data['page'] = "media";
         $data['media'] = $this->media->get_all_media();
         return view(DASHBOARD_VIEW . '/pages/media', $data);
+    }
+
+    public function components()
+    {
+        if($this->request->isAJAX()){
+            if($this->request->is("post")){
+                // print_r($this->request->getFiles());
+                // echo '<pre>';print_r($this->request->getVar());die;
+                $res = $this->apiController->saveForm($this->request);
+                // echo "<pre>";var_dump($res);die;
+                $result = array('status'=>true,'res'=>$res);
+                return json_encode($result);   
+
+            }else if($this->request->is("get")){
+                // echo 'aaaa';die;
+                // echo '<pre>';print_r($this->request->getVar());die;
+                $html = $this->apiController->fetchForm($this->request);
+                if(!empty($html)){
+                    $result = array('status'=>true,'html'=>$html);
+                    return json_encode($result);            
+                }else{
+                    $result = array('status' => false, 'message' => 'Please try again!');
+                    return $result;
+                }
+
+
+            }else{
+                $result = array('status' => false, 'message' => 'Please try again!');
+                return $result;
+            }
+        }
+
+        $data = array();
+        $data['parent'] = "admin";
+        $data['page'] = "components";
+        $data['components'] = $this->components->get_all_components();
+        return view(DASHBOARD_VIEW . '/pages/components', $data);
     }
 
 

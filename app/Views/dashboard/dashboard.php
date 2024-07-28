@@ -13,7 +13,7 @@
     <h1 class="mt-3">Dashboard</h1>
     
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 my-2">
             <div class="card">
                 <div class="card-body bg-grey">
                     <h5 class="card-title">Queries</h5>
@@ -22,12 +22,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 my-2">
             <div class="card">
                 <div class="card-body bg-grey">
                     <h5 class="card-title">Subscribe</h5>
-                    <p class="card-text"><?=$userSubscribe?> users are subscribe to news in website.</p>
-                    <a href="<?=base_url("dashboard/queries")?>" class="btn btn-primary">Click to view</a>
+                    <p class="card-text"><?=$userSubscribeCounts?> users are subscribe to news in website.</p>
+                    <a href="<?=base_url("dashboard/subscribe")?>" class="btn btn-primary">Click to view</a>
                 </div>
             </div>
         </div>

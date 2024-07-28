@@ -15,7 +15,7 @@
                 <p>You can check your taxable income on the basis of expense describe here.</p>
                 <form class="form-inline tax-calculator-form">
                     <div class="tc-sec">
-                        <h5 class="">Profile</h5>
+                        <h5 class="mt-4">Profile</h5>
                         <div class="row tc-sec-parent">
                             <div class="col-md-6 form-group">
                                 <label for="assessment_year">Assessment Year</label>
@@ -35,7 +35,7 @@
                                 </select>
                             </div>
                         </div>
-                        <h5 class="">Income</h5>
+                        <h5 class="mt-4">Income</h5>
                         <div class="row tc-sec-parent">
                             <div class="col-md-12 form-group in-single">
                                 <label for="i_1">Annual Salary</label>
@@ -54,7 +54,7 @@
                                 <input type="text" name="i_4" class="form-control" id="i_4" placeholder="" value=""/>
                             </div>
                         </div>
-                        <h5 class="">Deductions</h5>
+                        <h5 class="mt-4">Deductions</h5>
                         <div class="row tc-sec-parent">
                             <div class="col-md-12 form-group in-single">
                                 <label for="i_1">80C - Investement, LICs, NPS, SSY, Home Loans, etc.</label>

@@ -103,8 +103,10 @@ define('PAGES_LIST', array("about-us", "contact-us", "projects", "services"));
 
 
 define('FREE_EXCEL_PLAY', false);
-define('HEADER_LOGIN_BTN', false);
 define('PAID_EXCEL_PLAY', false);
+
+// to enable login btn on header & login functionality & dashboard visibility
+define('HEADER_LOGIN_BTN', true);
 define('ADMIN_PANEL', true);
 
 define('ASSETS', 'assets');

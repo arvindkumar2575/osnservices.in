@@ -22,9 +22,14 @@
 
     <!-- bootstrap minified css  -->
     <link href="<?= base_url(COMMON_ASSETS.'/css/bootstrap.min.css') ?>" rel="stylesheet">
+    <link href="<?= base_url(COMMON_ASSETS.'/summernotejs/summernote.css') ?>" rel="stylesheet">
     <link href="<?= base_url(COMMON_ASSETS.'/css/common.css') ?>" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?= base_url(DASHBOARD_ASSETS.'/css/dashboard.css') ?>" rel="stylesheet">
+
+
+    
+    <link href="<?= base_url(COMMON_ASSETS.'/summernotejs/summernote.min.js') ?>" rel="stylesheet">
 </head>
 
 <body>

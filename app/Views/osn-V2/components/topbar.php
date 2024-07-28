@@ -19,8 +19,24 @@
                 <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                <?php
+                if (HEADER_LOGIN_BTN) {
+                    $session = session();
+                    $usersession = $session->get('usersession');
+                    if (isset($usersession['isLoggedIn']) && $usersession['isLoggedIn']) {
+                        ?>
+                        <a class="btn bg-grey text-primary me-0" href="<?= base_url("dashboard") ?>">Dashboard</a>
+                    <?php
+                    } else {
+                    ?>
+                        <a class="btn bg-grey text-primary me-0" href="<?= base_url("login") ?>">Login</a>
+                    <?php
+                    }
+                }
+                ?>
             </div>
+            
         </div>
     </div>
 </div>

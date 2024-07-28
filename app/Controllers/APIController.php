@@ -306,6 +306,24 @@ class APIController extends BaseController
                     $html = view(DASHBOARD_VIEW . '/components/forms/delete-media', $data);
                 }
                 break;
+            case 'components':
+                // echo "<pre>";var_dump("aaaa");die;
+                $data = array();
+                $data['formname'] = $formname;
+                $data['action'] = $request->getVar("action");
+                if ($data['action'] == 'add') {
+                    $html = view(DASHBOARD_VIEW . '/components/forms/add-edit-components', $data);
+                } else if ($data['action'] == 'edit') {
+                    $page_id = $request->getVar("attr_id");
+                    $pageData = $this->common->get_data("tbl_components", array("id" => $page_id));
+                    $data = array_merge($data, $pageData);
+                    // echo "<pre>";print_r($data);die;
+                    $html = view(DASHBOARD_VIEW . '/components/forms/add-edit-components', $data);
+                } else if ($data['action'] == 'delete') {
+                    $data['id'] = $request->getVar("attr_id");
+                    $html = view(DASHBOARD_VIEW . '/components/forms/delete-components', $data);
+                }
+                break;
             default:
                 # code...
                 break;
@@ -583,13 +601,43 @@ class APIController extends BaseController
 
         $email->setSubject($data['reason_options']);
         $body = "
-        Hi ".$data['first_name'].",\n\n
-        Thanks for contacting to OSN Services.\n
-        We will connect you once your below query get reviewed by our representative.\n
-        Your Phone Number: ".$data['mobile_no']."\n
-        ".$data['default_message']."\n\n
-        Thanks
-        Tina Sharma\n
+        Hi ".$data['first_name'].",<br><br>
+        Thanks for contacting to OSN Services.<br>
+        We will connect you once your below query get reviewed by our representative.<br>
+        Your Phone Number: ".$data['mobile_no']."<br>
+        ".$data['default_message']."<br><br>
+        Thanks<br>
+        Tina Sharma<br>
+        OSN Service Team
+        ";
+        $email->setMessage($body);
+
+        $email->send();
+    }
+
+    public function testSendMail(){
+        $email = \Config\Services::email();
+
+        $data = array(
+            "email_id"=>"arvindkumar2575@gmail.com",
+            "reason_options"=>"test email subject",
+            "first_name"=>"Arvind",
+            "mobile_no"=>"8130123173",
+            "default_message"=>"test description"
+        );
+        $email->setFrom('info@osnservices.in', 'OSN Services');
+        $email->setTo($data['email_id']);
+        $email->setBCC('osnservices.in@gmail.com');
+
+        $email->setSubject($data['reason_options']);
+        $body = "
+        Hi ".$data['first_name'].",<br><br>
+        Thanks for contacting to OSN Services.<br>
+        We will connect you once your below query get reviewed by our representative.<br>
+        Your Phone Number: ".$data['mobile_no']."<br>
+        ".$data['default_message']."<br><br>
+        Thanks<br>
+        Tina Sharma<br>
         OSN Service Team
         ";
         $email->setMessage($body);
@@ -616,8 +664,20 @@ class APIController extends BaseController
             case 'leadCounts':
                 $result = $this->common->get_count("tbl_contact_form",array("status"=>"0"));
                 break;
-            case 'news_subscribe':
+            case 'userSubscribeCounts':
+                $result = $this->common->get_count("tbl_news_subscribe",array("status"=>"0"));
+                break;
+            case 'newsSubscribe':
                 $result = $this->common->get_data("tbl_news_subscribe",array(),array("id","email","status","updated_at"),"multiple");
+                break;
+            case 'userCounts':
+                $result = $this->common->get_count("tbl_users");
+                break;
+            case 'pageCounts':
+                $result = $this->common->get_count("tbl_pages");
+                break;
+            case 'mediaCounts':
+                $result = $this->common->get_count("tbl_media");
                 break;
                 
             default:

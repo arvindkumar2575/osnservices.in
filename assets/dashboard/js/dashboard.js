@@ -328,13 +328,16 @@ $(document).ready(function () {
         $(".srte-editor").summernote()
     })
 
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
 
 
 
     
     //######################################################### add pages form  #####################################################
 
-    $(document).on('click','.users-btn-add, .users-btn-edit, .users-btn-delete, .pages-btn-add, .pages-btn-edit, .pages-btn-delete, .pages-btn-design, .media-btn-add, .media-btn-edit, .media-btn-delete',function(){
+    $(document).on('click','.users-btn-add, .users-btn-edit, .users-btn-delete, .pages-btn-add, .pages-btn-edit, .pages-btn-delete, .pages-btn-design, .media-btn-add, .media-btn-edit, .media-btn-delete, .components-btn-add',function(){
         let data = {}
         data.formname = $(this).data('formname')
         data.action = $(this).data('action')

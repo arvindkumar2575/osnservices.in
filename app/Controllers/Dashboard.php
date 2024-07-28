@@ -25,7 +25,7 @@ class Dashboard extends BaseController
         $data = array();
         $data['page'] = "dashboard";
         $data['leadCounts'] = $this->apiController->getLeads($this->request,"leadCounts");
-        $data['userSubscribe'] = $this->apiController->getLeads($this->request,"userSubscribe");
+        $data['userSubscribeCounts'] = $this->apiController->getLeads($this->request,"userSubscribeCounts");
         // echo '<pre>';print_r($data);die;
         return view(DASHBOARD_VIEW . '/dashboard', $data);
     }
@@ -57,7 +57,7 @@ class Dashboard extends BaseController
         $data['parent'] = "dashboard";
         $data['page'] = "subscribe";
         $data['pagination'] = $this->apiController->getPagination($this->request,"news_subscribe");
-        $data['leads'] = $this->apiController->getLeads($this->request,"news_subscribe");
+        $data['leads'] = $this->apiController->getLeads($this->request,"newsSubscribe");
         // echo '<pre>';print_r($data);die;
         return view(DASHBOARD_VIEW . '/pages/subscribe', $data);
     }

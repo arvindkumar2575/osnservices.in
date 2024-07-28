@@ -5,32 +5,39 @@
 
 <?= $this->section("content") ?>
 
-<div class="main container">
-    <div class="main-heading">
-        <h2 class="primary-color">Digital Marketing & SEO by OSN</h2>
-    </div>
-    <div class="main-description">
-        <p>
-            we are providing digital marketing strategies for your online presence and SEO solutions. We specialize in helping businesses in this competitive digital landscape by leveraging strategic marketing techniques and search engine optimization strategies.
-        </p>
-        <h6>Some key services we provide here:-</h6>
-        <ul>
-            <li>Search Engine Optimization (SEO)</li>
-            <li>Content Marketing</li>
-            <li>Social Media Marketing (SMM)</li>
-            <li>Pay-Per-Click (PPC) Advertising</li>
-        </ul>
-        <h6>Why you should choose our services</h6>
-        <p>
-            Our experienced team of digital marketers and SEO specialists stays updated with industry trends and best practices to deliver results. We understand that every business is unique. Our customized strategies are tailored to your specific goals, budget, and target audience. We provide your campaign performance with detailed analytics and regular reports.
-        </p>
-        <p>
-            Ready to elevate your online presence and achieve digital success? Contact us for a free consultation and let's create a winning digital strategy that drives growth and maximizes your online potential.
-        </p>
-    </div>
-    <div class="contact-link">
-        <p>If you want to inquire our service the same, feel free to <a href="<?= base_url('contact-us?q=digital-marketing') ?>">ping here</a></p>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="<?= base_url('assets/images/click-generator.png') ?>" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">The Click Generator</h4>
+                        <p>It is a way to generate traffic on website via email </p>
+                        <a class="fw-medium" href="https://warriorplus.com/o2/a/q3b4wcn/0">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="<?= base_url('assets/images/webx.png') ?>" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <h4 class="mb-3">WebX</h4>
+                        <p>Create Any Website & Website Funnel for Traffic booster.</p>
+                        <a class="fw-medium" href="https://warriorplus.com/o2/a/zjx840m/0">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<div class="container contact-link">
+    <p>If you want to inquire our service the same, feel free to <a href="<?= base_url('contact-us?q=digital-marketing') ?>">ping here</a></p>
+</div>
+
 
 <?= $this->endSection("content") ?>

@@ -71,6 +71,9 @@ class OsnV2 extends BaseController
 
 
 
+
+
+
     public function newsSubscribe()
     {
         if ($this->request->isAJAX()) {

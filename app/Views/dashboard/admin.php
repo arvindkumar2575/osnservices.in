@@ -12,27 +12,46 @@
 <div class="container-fluid px-4 admin-page">
     <h1 class="mt-3">Admin</h1>
     
-    <div class="card mb-4">
-        <div class="card-header d-flex justify-content-between">
-            <span>
-                <i class="fas fa-table me-1"></i>
-                Settings
-            </span>
-            <span>
-            </span>
+    <div class="row">
+        <div class="col-sm-6 my-2">
+            <div class="card">
+                <div class="card-body bg-grey">
+                    <h5 class="card-title">Users</h5>
+                    <p class="card-text"><?=$userCounts?> users are generate in website.</p>
+                    <a href="<?=base_url("admin/users")?>" class="btn btn-primary">Click to view</a>
+                </div>
+            </div>
         </div>
-        <div class="card-body lead-table-div">
-            <div>
-                <a href="<?=base_url('admin/users')?>">Users</a>
+        <div class="col-sm-6 my-2">
+            <div class="card">
+                <div class="card-body bg-grey">
+                    <h5 class="card-title">Pages</h5>
+                    <p class="card-text"><?=$pageCounts?> pages are in website.</p>
+                    <a href="<?=base_url("admin/pages")?>" class="btn btn-primary">Click to view</a>
+                </div>
             </div>
-            <div>
-                <a href="<?=base_url('admin/pages')?>">Pages</a>
+        </div>
+        <div class="col-sm-6 my-2">
+            <div class="card">
+                <div class="card-body bg-grey">
+                    <h5 class="card-title">Media</h5>
+                    <p class="card-text"><?=$mediaCounts?> media are in website.</p>
+                    <a href="<?=base_url("admin/media")?>" class="btn btn-primary">Click to view</a>
+                </div>
             </div>
-            <div>
-                <a href="<?=base_url('admin/media')?>">Media</a>
+        </div>
+        <div class="col-sm-6 my-2">
+            <div class="card">
+                <div class="card-body bg-grey">
+                    <h5 class="card-title">Components</h5>
+                    <p class="card-text"><?=$mediaCounts?> components are in website.</p>
+                    <a href="<?=base_url("admin/components")?>" class="btn btn-primary">Click to view</a>
+                </div>
             </div>
         </div>
     </div>
+
+
 </div>
 
 <?= $this->endSection() ?>

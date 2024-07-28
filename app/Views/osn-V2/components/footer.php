@@ -25,8 +25,9 @@
                 <h4 class="text-light mb-4">Quick Links</h4>
                 <a class="btn btn-link" href="<?= base_url("/about-us") ?>">About Us</a>
                 <a class="btn btn-link" href="<?= base_url("/contact-us") ?>">Contact Us</a>
-                <a class="btn btn-link" href="<?= base_url("/services") ?>">Our Services</a>
-                <?php /*<a class="btn btn-link" href="<?= base_url("/terms-and-condition") ?>">Terms & Condition</a>*/ ?>
+                <!-- <a class="btn btn-link" href="<?= base_url("/services") ?>">Our Services</a> -->
+                <a class="btn btn-link" href="<?= base_url("/faq") ?>">FAQs</a>
+                <a class="btn btn-link" href="https://checkquery.com">Check Query</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Newsletter</h4>
