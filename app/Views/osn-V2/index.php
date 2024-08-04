@@ -96,7 +96,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Digital Marketing</h4>
-                            <p>Give digital services in various field like seo, video & thumbnail editing, etc.</p>
+                            <p>Boost your earnings with these Digital & Software Products and earn more money through sales funnels and various software products.</p>
                             <a class="fw-medium" href="<?= base_url("services/digital-marketing") ?>">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>

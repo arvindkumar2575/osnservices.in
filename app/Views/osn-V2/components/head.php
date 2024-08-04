@@ -31,5 +31,5 @@
     <!-- common css  -->
     <link href="<?= base_url(COMMON_ASSETS.'/css/common.css') ?>" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="<?= base_url('assets/osn-v2/css/style.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/osn-v2/css/style.css?v=1.1.0') ?>" rel="stylesheet">
 </head>

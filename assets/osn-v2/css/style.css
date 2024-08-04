@@ -663,3 +663,6 @@
     display: flex;
     align-items: flex-end;
 }
+.text-black{
+    color: #555;
+}
